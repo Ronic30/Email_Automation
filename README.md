@@ -1,6 +1,7 @@
 # Email_Automation
 EMAIL_AUTOMATION using Python, where you can send a reminder using the Python script.
-Library used: pandas, date, and smtplib( simple mail transfer protocol).
+
+Library used: pandas, date, and smtplib(simple mail transfer protocol).
 
 How it Works :
   1. Fetch the data from a spreadsheet by converting the spreadsheet into a CSV file to use it in a Python script.
