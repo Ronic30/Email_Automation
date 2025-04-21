@@ -34,7 +34,7 @@ def send_email(subject, receiver_email, name, due_date, invoice_no, amount):
     # Create the base text message.
     msg = EmailMessage()
     msg["Subject"] = subject
-    msg["From"] = formataddr(("Shruti class teacher Corp.", f"{sender_email}"))
+    msg["From"] = formataddr(("Rohan Rajput corp.", f"{sender_email}"))
     msg["To"] = receiver_email
     msg["BCC"] = sender_email
 
@@ -84,7 +84,7 @@ def send_email(subject, receiver_email, name, due_date, invoice_no, amount):
 if __name__ == "__main__":
     send_email(
         subject="Invoice Reminder",
-        receiver_email="shrutirajput3269@gmail.com",  
+        receiver_email="",  
         name="Rohan Rajput",
         due_date="12, Apr 2025",
         invoice_no="INV-21-12-009",
