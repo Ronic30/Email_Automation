@@ -1,6 +1,5 @@
 from datetime import date  # core python module
 import pandas as pd  # pip install pandas
-from deta import app
 from send_email import send_email  # local python module
 
 
