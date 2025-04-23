@@ -1,17 +1,15 @@
-from datetime import date  # core python module
-import pandas as pd  # pip install pandas
-from send_email import send_email  # local python module
+from datetime import date
+import pandas as pd
+from send_email import send_email
 
 
-# Public GoogleSheets url - not secure!
-SHEET_ID = "1Fs6EBUGaArv7qjEunktadpjOWgQLEj4Q5539pxu76mI"  # !!! CHANGE ME !!!
-SHEET_NAME = "Sheet1"  # !!! CHANGE ME !!!
+SHEET_ID = "1QPVDGZ9Psqe3Oeb74unJwi0XY-VJXUeVUL4BI5P1NGo"  # CHANGE IT FOR NEW SHEET
+SHEET_NAME = "htmldata"  # CHANGE IT FOR NEW SHEET
 URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}"
-
 
 def load_df(url):
     parse_dates = ["due_date", "reminder_date"]
-    df = pd.read_csv(url, parse_dates=parse_dates, dayfirst=True)
+    df = pd.read_csv(url, parse_dates=parse_dates) #dayfirst=True
     return df
 
 
@@ -25,14 +23,12 @@ def query_data_and_send_emails(df):
             print(f"Invalid reminder_date: {row['reminder_date']}")
             continue
 
-        if (present >= reminder_date) and (row["has_paid"] == "no"):
+        if (present >= reminder_date) and (row["status"] == "no"):
             send_email(
-                subject=f'[Coding Is Fun] Invoice: {row["invoice_no"]}',
+                subject=row["subject"],
                 receiver_email=row["email"],
                 name=row["name"],
-                due_date=row["due_date"].strftime("%d, %b %Y"),  # example: 11, Aug 2022
-                invoice_no=row["invoice_no"],
-                amount=row["amount"],
+                due_date=row["due_date"].strftime("%d, %b %Y")
             )
             email_counter += 1
     return f"Total Emails Sent: {email_counter}"

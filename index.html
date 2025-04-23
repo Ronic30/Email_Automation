@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="pg">
+        <div class="prt1">
+            <div class="info">
+                <div class="logo">
+                    <img class="img" src="icons/download.png" alt="">
+                </div>
+                <div class="about">
+                    The Smart Email Reminder Automation System is a productivity-enhancing tool designed to automate the
+                    process of sending timely email reminders. By simply entering basic information such as the
+                    recipient’s name, email address, subject, due date, and reminder date, users can schedule
+                    personalized reminder emails that are sent automatically—ensuring no important task or deadline is
+                    missed.
+                    <br><br>
+                    This system is especially useful for professionals, students, and teams who manage multiple
+                    deadlines or tasks. It eliminates the need for manual follow-ups and boosts efficiency by automation
+                    and personalization.
+                </div>
+
+            </div>
+            <div class="form">
+                <form method="post"
+                    action="https://script.google.com/macros/s/AKfycbzGTds4ksGWSR_wtM6_QhSdH6QnAQ_lyz_eqIfgY3Nu3pkUX1jL1oJ9k4O6kciefOct/exec"
+                    name="contact-form">
+                    <div class="block">
+                        <div class="subblock1">
+                            <div class="a1">
+
+                                <img src="icons/img1.svg" alt="" class="icon">
+                            </div>
+                            <div class="a2">
+
+                                <label for="name"> Name* </label>
+                            </div>
+                        </div>
+                        <div class="subblock">
+                            <input type="text" name="name" placeholder="Name">
+                        </div>
+
+
+
+                    </div>
+                    <div class="block">
+                        <div class="subblock1">
+                            <div class="a1">
+
+                                <img src="icons/img2.svg" alt="" class="icon">
+                            </div>
+                            <div class="a2">
+
+                                <label for="email">Email ID* </label>
+                            </div>
+                        </div>
+                        <div class="subblock">
+                            <input type="email" name="email" placeholder="Email">
+
+                        </div>
+
+
+                    </div>
+                    <div class="block">
+                        <div class="subblock1">
+                            <div class="a1">
+
+                                <img src="icons/img3.svg" alt="" class="icon">
+                            </div>
+                            <div class="a2">
+
+                                <label for="subject">Subject* </label>
+                            </div>
+
+                        </div>
+                        <div class="subblock">
+                            <div class="a1">
+
+                                <input type="text" name="subject" placeholder="like: payment reminder">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="block">
+                        <div class="subblock1">
+                            <div class="a1">
+
+                                <img src="icons/img4.svg" alt="" class="icon">
+                            </div>
+                            <div class="a2">
+
+                                <label for="">Due Date* </label>
+                            </div>
+
+                        </div>
+                        <div class="subblock">
+                            <input type="date" name="due_date" placeholder="dd-mm-yyyy">
+
+                        </div>
+
+                    </div>
+                    <div class="block">
+                        <div class="subblock1">
+                            <div class="a1">
+
+                                <img src="icons/img5.svg" alt="" class="icon">
+                            </div>
+                            <div class="a2">
+
+                                <label for="">Reminder Date* </label>
+                            </div>
+
+                        </div>
+                        <div class="subblock">
+                            <input type="date" name="reminder_date" placeholder="dd-mm-yyyy">
+
+                        </div>
+
+                    </div>
+                    <div class="block blocka1">
+                        <div class="subblock1">
+                            <div class="a1">
+
+                                <img src="icons/img6.svg" alt="" class="icon">
+                            </div>
+                            <div class="a2">
+
+                                <label for="Completion">Completion</label>
+                            </div>
+
+                        </div>
+                        <div class="subblock">
+                            <select name="status" id="status">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+                    <div class="block">
+                        <input class="submit" type="submit" value="Submit" id="submit">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="Google_Sheet.js"></script>
+</body>
+
+</html>
