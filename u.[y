@@ -1,0 +1,11 @@
+Q4. Write a Python program that reads a file named sentences.txt, extracts all words, and analyzes the
+frequency of each vowel (a, e, i, o, u) across all words. Your program should:
+ Convert the entire text to lowercase and remove punctuation.
+ Count how many times each vowel appears.
+ Store the results in a dictionary in the format: vowel: count.
+ Write the dictionary to a file named vowel_counts.txt.
+ Convert the vowel counts to a NumPy array and compute:
+ Total vowels
+ Average vowel count
+ Most and least frequent vowels
+ Plot a bar graph of the vowel frequencies using Matplotlib.
